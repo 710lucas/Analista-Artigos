@@ -1,0 +1,4 @@
+crewai
+pdfminer.six
+pdfplumber
+python-dotenv
