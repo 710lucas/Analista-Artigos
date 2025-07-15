@@ -1,6 +1,6 @@
 # Analisador de Artigos PDF 📄✨
 
-Este projeto oferece uma solução automatizada para analisar artigos em formato PDF, extraindo informações relevantes e gerando análises detalhadas. Utiliza bibliotecas Python como `crewai`, `pdfminer.six` e `pdfplumber` para o processamento dos arquivos, e modelos de linguagem (LLMs) para a interpretação e análise do conteúdo.
+Este projeto oferece uma solução automatizada para analisar artigos em formato PDF, extraindo informações relevantes e gerando análises detalhadas. Utiliza bibliotecas Python como `crewai`, `pdfminer.six` e `pdfplumber` para o processamento dos arquivos, além de modelos de linguagem (LLMs) para interpretação e análise de conteúdo.
 
 ---
 
@@ -9,6 +9,30 @@ Este projeto oferece uma solução automatizada para analisar artigos em formato
 * **Extração de Texto**: Lê e extrai texto de arquivos PDF. 📖
 * **Análise de Conteúdo**: Utiliza um LLM para gerar resumos, insights ou informações personalizadas. 🧠💡
 * **Geração de Relatórios**: Salva as análises em arquivos `.md` para consulta posterior. 📝
+
+---
+
+## 🧭 Como Funciona (Experiência do Usuário)
+
+A aplicação oferece três modos de análise, cada um voltado para diferentes necessidades:
+
+### 🔹 Modo Simples
+
+* Análise totalmente automatizada.
+* Gera um resumo do artigo, tópicos principais e possíveis aplicações.
+* Ideal para leituras rápidas.
+
+### 🔸 Modo Personalizado
+
+* Permite inserir perguntas específicas ou comandos customizados.
+* Indicado para análises direcionadas (ex: “Quais são as contribuições do artigo?”, “Como o autor trata o tema da educação?”).
+
+### 🔷 Modo Misto
+
+* Combina o resumo automático com respostas a perguntas personalizadas.
+* Recomendado para revisões completas e aprofundadas.
+
+A escolha do modo de operação é feita no próprio notebook, ajustando as variáveis de entrada ou os parâmetros das funções principais.
 
 ---
 
@@ -36,10 +60,10 @@ MODEL_NAME="SEU_MODELO_DE_LINGUAGEM_AQUI"
 
 Substitua com seus dados reais:
 
-* `GOOGLE_API_KEY`: chave da API do Google.
+* `GOOGLE_API_KEY`: sua chave de API do Google.
 * `MODEL_NAME`: nome do modelo (ex: `gemini/gemini-1.5-flash`).
 
-📢 **Recomendado:** Utilize o [Google AI Studio](https://aistudio.google.com/app/apikey) para obter gratuitamente uma chave de API e acessar os modelos Gemini. Eles são poderosos, acessíveis e fáceis de integrar neste projeto.
+📢 **Recomendado:** Utilize o [Google AI Studio](https://aistudio.google.com/app/apikey) para obter gratuitamente uma chave de API e acessar os modelos Gemini. Eles são potentes, acessíveis e de fácil integração.
 
 ### 3. Execução do Notebook
 
@@ -50,20 +74,20 @@ pip install -r requirements.txt
 jupyter notebook  # ou jupyter lab
 ```
 
-* Abra o arquivo `Analista_de_artigos.ipynb` e execute as células sequencialmente.
+Abra o notebook `Analista_de_artigos.ipynb` e execute as células sequencialmente.
 
 #### ☁️ Google Colab
 
 1. Acesse o [Google Colab](https://colab.research.google.com/)
-2. Envie o notebook `Analista_de_artigos.ipynb` via `Arquivo > Fazer upload de notebook`
+2. Faça upload do `Analista_de_artigos.ipynb`
 3. No painel lateral esquerdo:
 
-   * Clique em 📂 (explorador de arquivos) > ⬆ Upload dos arquivos PDF
-4. Configure as variáveis de ambiente via "Secrets" do Colab:
+   * Clique em 📂 > ⬆ Upload dos PDFs
+4. Configure as variáveis de ambiente usando o menu de “Secrets”:
 
-   * 🔑 Adicione `GOOGLE_API_KEY` e `MODEL_NAME` com seus respectivos valores
+   * Adicione `GOOGLE_API_KEY` e `MODEL_NAME`
    * Ative a opção "Notebook access"
-5. Execute todas as células do notebook
+5. Execute todas as células
 
 ---
 
